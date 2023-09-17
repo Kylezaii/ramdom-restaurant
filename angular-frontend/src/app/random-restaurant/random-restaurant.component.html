@@ -1,0 +1,12 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Submit A Restaurant</h3>
+    <form>
+      <div class="form-group">
+        <label>Restaurant Name</label>
+        <input type="text" class="form-control" id="restaurantName" [(ngModel)]="restaurantName" name="restaurantName">
+      </div>
+      
+      <button class="btn btn-success" (click)="onSubmit()">Submit Restaurant</button>
+      <button class="btn btn-success" (click)="onRandom()">Show Random Restaurant</button>
+    </form>
+  </div>

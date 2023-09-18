@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class RandomRestaurantComponent implements OnInit {
 
   restaurantName: string; 
+  showRestaurantName: boolean = false;
   randomRestaurantDisplay: string;
 
   constructor(
@@ -34,6 +35,7 @@ export class RandomRestaurantComponent implements OnInit {
     this.employeeService.getRandomRestaurant().subscribe(
       data => {
         this.randomRestaurantDisplay = data;
+        this.showRestaurantName = true
       },
       error => console.log(error)
     );
